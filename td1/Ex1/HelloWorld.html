@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="HelloApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="HelloController as hello">
+        <input type="text" ng-model="hello.message">
+        <br> Message : {{hello.message}}
+    </div>
+
+    <script>
+        angular.module("HelloApp",[]).controller("HelloController",function(){this.message="Hello world";});
+    </script>
+
+    <div ng-app="" ng-init="prenom='Maurice'">
+
+        <p>Prénom : <input type="text" ng-model="prenom"></p>
+        <p>Vous avez saisi : {{ prenom }}</p>
+        <!--
+
+        ng-app initialise une application AngularJS.
+        ng-init initialise les données d'une application.
+        ng-model associe à la valeur de contrôles HTML (input, select, textarea) les données de l'application (data-binding).
+
+        -->
+    </div>
+
+    <div ng-init="clients=[
+    {id:1,nom:'Heidi',pays:'Norvège'},
+    {id:2,nom:'Hans',pays:'Allemagne'},
+    {id:3,nom:'Maurice',pays:'France'}]">
+        <div ng-repeat="client in clients">
+            <label><input type="radio" ng-value="client.id" name="client">{{ client.nom + ', ' + client.pays }}</label>
+        </div>
+    </div>
+
+    <!--
+        ng-init initialise les données (tableau d'objets).
+        ng-repeat répète une séquence HTML en exécutant un foreach sur le tableau clients.
+        ng-value définit la valeur de chaque case d'option, à partir de l'id de chaque client
+    -->
+
+    <p>Vous avez saisi : {{ prenom }}</p>
+
+    <span>
+    1+2={{1+2}}
+    </span>
+
+    <p>Vous avez saisi : {{ prenom | uppercase}}</p>
+
+    <span>
+    1+2={{1+2 | currency}}
+    </span>
+
+
+    var myAppModule = angular.module('myApp', []);
+
+    <div ng-app="myApp">
+        ...
+    </div>
+
+
+</body>
+</html>

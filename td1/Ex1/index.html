@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Application Note</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
-    <!--Choisir exercice-->
+<div ng-app="myApp">
+    <label for="script">Message</label><br/>
+    <textarea data-ng-change="count()" name="script" id="script" data-ng-model="script" cols="40" rows="5" maxlength="100">Truc</textarea><br/>
+    <button ng-click="clear()">Clear</button><br/>
+    <button ng-click="save()">Save</button><br/>
+</div>
 </body>
 </html>

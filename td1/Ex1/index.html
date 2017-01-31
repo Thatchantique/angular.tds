@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Application Note</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.min.js"></script>
+    <script src="app/ServicesApp.js"></script>
+    <script src="app/ServicesController.js"></script>
 </head>
-<body>
-<div ng-app="myApp">
+<body ng-app="myApp">
+<div ng-controller="myAppCtrl as noteCtrl">
     <label for="script">Message</label><br/>
-    <textarea data-ng-change="count()" name="script" id="script" data-ng-model="script" cols="40" rows="5" maxlength="100">Truc</textarea><br/>
-    <button ng-click="clear()">Clear</button><br/>
-    <button ng-click="save()">Save</button><br/>
+    <textarea data-ng-change="noteCtrl.count()" name="script" id="script" data-ng-model="noteCtrl.message" cols="40" rows="5" maxlength="100">Truc</textarea><br/>
+    <button name="clear" ng-click="noteCtrl.clear()">Clear</button><br/>
+    <button name="save" ng-click="noteCtrl.save()">Save</button><br/>
+    <p>Il vous reste : {{noteCtrl.count()}}</p>
 </div>
 </body>
 </html>

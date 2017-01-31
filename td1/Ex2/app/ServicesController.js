@@ -1,7 +1,7 @@
 /**
  * Created by gaujac on 31/01/17.
  */
-ex2App.constructor('ex2App', ["$http","$cookies",function () {
+ex2App.controller('ex2AppCtrl', ["$http","$cookies",function ($http,$cookies) {
     var self = this;
 
     this.services= [
@@ -23,12 +23,11 @@ ex2App.constructor('ex2App', ["$http","$cookies",function () {
             "active":false
         }];
 
-    services_select;
+    // services_select;
 
     this.total = function () {
-
+        return
     };
     this.toggleActive = function () {
-
     }
 }]);

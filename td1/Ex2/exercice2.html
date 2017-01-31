@@ -12,20 +12,18 @@
 </head>
 <body ng-app="ex2App">
     <h1>Services</h1>
-    <p>Choisissez les éléments à inclure <b>{{}} service séléctionnés</b></p>
-    <div ng-controller="">
-        <ul>
-            <li>
-
-            </li>
-        </ul>
-    </div>
-    <div>
-        <p>Total : {{}}</p>
-    </div>
-    <div>
-        <input type="checkbox" name="promotion" id="promo"/>
-        <input type="text" name="code_promotion" id="code_promo"/>
+    <div ng-controller="ex2AppCtrl as serviceCtrl">
+        <p>Choisissez les éléments à inclure <b>{{}} service séléctionnés</b></p>
+            <ul ng-repeat="item in serviceCtrl.services">
+                <li >{{item.name}} {{item.price}} {{item.active}}</li>
+            </ul>
+        <div>
+            <p>Total : {{}}</p>
+        </div>
+        <div>
+            <input type="checkbox" name="promotion" id="promo"/>
+            <input type="text" name="code_promotion" id="code_promo"/>
+        </div>
     </div>
 </body>
 </html>

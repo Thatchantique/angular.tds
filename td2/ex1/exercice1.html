@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>TD3 - EX1</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>TD2 - EX1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/assets.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-cookies.min.js"></script>
@@ -18,17 +19,21 @@
 <p>
 <div align="left">
     <!--<textarea name="disponible" id="disponible" cols="40" rows="5" maxlength="100">-->
-        <select size="8" multiple="multiple" ng-model="selectedTitle" ng-options = "dispoItems.title for dispoItems in items">
-               {{dispoItems.title}}
-        </select>
+    <select size="8" multiple="multiple" ng-model="selectedTitle" ng-options="dispoItems.title for dispoItems in items">
+        {{dispoItems.title}}
+    </select>
     <!--</textarea>-->
 </div>
 </p>
 <div align="center">
-<button type="button" name="all_insert" class="btn btn-primary">all insert</button><br/>
-<button type="button" name="all_remove" class="btn btn-primary">all remove</button><br/>
-<button type="button" name="remove" class="btn btn-primary">remove</button><br/>
-<button type="button" name="insert" class="btn btn-primary">insert</button><br/>
+    <button type="button" name="all_insert" class="btn btn-primary">all insert</button>
+    <br/>
+    <button type="button" name="all_remove" class="btn btn-primary">all remove</button>
+    <br/>
+    <button type="button" name="remove" class="btn btn-primary">remove</button>
+    <br/>
+    <button type="button" name="insert" class="btn btn-primary">insert</button>
+    <br/>
 </div>
 
 <button onclick="step = 1" type="button" class="btn btn-submit" align="right">Etape suivante</button>

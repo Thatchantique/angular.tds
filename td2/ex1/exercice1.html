@@ -13,6 +13,8 @@
 </head>
 <body ng-app="listApp1" ng-controller="listAppController as ctrlApp">
 <h1>Selectionnez vos produits</h1>
+
+<div ng-view>
 <ng-pluralize count="ctrlApp.count"
               when="{'0' : 'Aucun service', '1':'1 service', 'other': '{} services'}"></ng-pluralize>
 

@@ -1,9 +1,7 @@
 /**
  * Created by Gaujac on 28/02/2017.
  */
-var CurrencyApp = angular.module("CurrencyApp");
-
-angular.module('httpExample', [])
+var CurrencyApp = angular.module("CurrencyApp",[])
     .config(['$sceDelegateProvider', function ($sceDelegateProvider) {
         // We must whitelist the JSONP endpoint that we are using to show that we trust it
         $sceDelegateProvider.resourceUrlWhitelist([

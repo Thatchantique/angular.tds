@@ -21,9 +21,10 @@
                 <a href="#" ng-click="currency.swap()"><></a>
                 <select ng-options="cur as (cur.code +  '-' + cur.name) for cur in currency.currencies"
                         ng-model="currency.to"/>
-                <input type="submit" value="Envoyer" class="btn btn-primary btn-sm" ng-click="currency.getResult()"/>
-
+                <input type="button" value="Envoyer" class="btn btn-primary btn-sm" ng-click="currency.getResult()"/>
+                <input ng-model="currency.result" type="text" size="5" class="form-control ng-pristine ng-valid ng-touched" readonly="readonly"/>
             </form>
+
         </div>
     </div>
 </div>

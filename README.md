@@ -3,7 +3,7 @@
 ### Objectifs :
 
 ### Structure de l'application :
-[Application](http://slamwi.kobject.net/_media/slam4/richclient/angularjs/routage2.png?w=700&tok=68d6de)
+[Routage](http://slamwi.kobject.net/_media/slam4/richclient/angularjs/routage2.png)
 
 ### Avancement :
 - [x] 1.2.1 - Création des vues

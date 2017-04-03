@@ -82,4 +82,4 @@
 - Créer un squelette de projet multi-modules
 
 ### Structure de l'application :
-[](http://slamwi.kobject.net/_media/slam4/richclient/angularjs/routage2.png)
+[Routage](http://slamwi.kobject.net/_media/slam4/richclient/angularjs/routage2.png)
